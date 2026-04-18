@@ -4,5 +4,5 @@
 • Tema yang dipilih : Minecraft Inventory System.
 
 Nama dan Nim Anggota Kelompok :
-- 124250063 / Satria Anjasmara Hammam
 - 124250064 / Sara Suci Ramadani
+- 124250063 / Satria Anjasmara Hammam
