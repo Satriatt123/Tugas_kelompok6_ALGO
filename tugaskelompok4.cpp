@@ -16,6 +16,7 @@ struct Node {
     Node*  next;
     Node*  prev;
 };
+<<<<<<< HEAD
 
 Node* head = NULL;
 Node* tail = NULL;
@@ -97,6 +98,11 @@ Node* buatNode(string nama, int jumlah) {
     baru->prev   = NULL;
     return baru;
 }
+=======
+// ini yaa yang aku ubah
+Item inventory[BARIS][KOLOM];
+int startBaris = 0;
+>>>>>>> fef80aac3df3cf5eb8879632a1b1b4378fa700af
 
 void inisialisasiInventory() {
     for (int i = 0; i < TOTAL_SLOT; i++) {
