@@ -10,7 +10,7 @@ struct Item {
     string nama;
     int jumlah;
 };
-
+// ini yaa yang aku ubah
 Item inventory[BARIS][KOLOM];
 int startBaris = 0;
 
