@@ -415,22 +415,31 @@ void simpanFile(string user) {
 }
 
 void loadFile(string user) {
-	string filename = "inventory_" + user + ".txt";
-    FILE* file = fopen(filename.c_str(), "r");    
-    if (file == nullptr) return;
+    string filename = "inventory_" + user + ".txt";
+    FILE* file = fopen(filename.c_str(), "r");
+
+    if (file == NULL) return;
+
+    Node* reset = head;
+    while (reset != NULL) {
+        reset->nama = "Kosong";
+        reset->jumlah = 0;
+        reset = reset->next;
+    }
 
     Node* curr = head;
     char buffer[100];
     int jml;
 
     while (curr != NULL && fscanf(file, "%99[^#]#%d\n", buffer, &jml) == 2) {
-        curr->nama   = string(buffer);
+        curr->nama = string(buffer);
         curr->jumlah = jml;
 
         if (curr->jumlah <= 0 || curr->nama.empty()) {
-            curr->nama   = "Kosong";
+            curr->nama = "Kosong";
             curr->jumlah = 0;
         }
+
         curr = curr->next;
     }
 
